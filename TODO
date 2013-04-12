@@ -1,3 +1,4 @@
+- Unit tests for all functions, maybe a large test module
 - Factorization correction
 - Proper paramodulation (not a hack)
 - backward subsumption correction
