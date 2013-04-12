@@ -1,0 +1,9 @@
+; HU1.THM  See TGTP, Chapter 5
+ 
+P(x)
+~P(a()) | Q(x)
+ 
+negated_conclusion
+~Q(f(x))
+ 
+

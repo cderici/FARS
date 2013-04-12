@@ -1,0 +1,8 @@
+; A.THM  See TGTP, Chapter 6, Section 6.1
+ 
+P(x) | ~Q(x)
+Q(a()) | Q(b())
+ 
+negated_conclusion
+~P(x)
+ 

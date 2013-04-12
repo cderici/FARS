@@ -1,0 +1,132 @@
+Initiating the input : 
+<ID> <predCount> <actualClause>
+(1 4 (p00(a) p01(a) p02(a) p03(a)))
+(2 4 (p04(a) p05(a) p06(a) p07(a)))
+(3 4 (p08(a) p09(a) p10(a) p11(a)))
+(4 4 (p12(a) p13(a) p14(a) p15(a)))
+(5 4 (p16(a) p17(a) p18(a) p19(a)))
+(6 2 (~p00(a) ~p04(a)))
+(7 2 (~p00(a) ~p08(a)))
+(8 2 (~p00(a) ~p12(a)))
+(9 2 (~p00(a) ~p16(a)))
+(10 2 (~p04(a) ~p08(a)))
+(11 2 (~p04(a) ~p12(a)))
+(12 2 (~p04(a) ~p16(a)))
+(13 2 (~p08(a) ~p12(a)))
+(14 2 (~p08(a) ~p16(a)))
+(15 2 (~p12(a) ~p16(a)))
+(16 2 (~p01(a) ~p05(a)))
+(17 2 (~p01(a) ~p09(a)))
+(18 2 (~p01(a) ~p13(a)))
+(19 2 (~p01(a) ~p17(a)))
+(20 2 (~p05(a) ~p09(a)))
+(21 2 (~p05(a) ~p13(a)))
+(22 2 (~p05(a) ~p17(a)))
+(23 2 (~p09(a) ~p13(a)))
+(24 2 (~p09(a) ~p17(a)))
+(25 2 (~p13(a) ~p17(a)))
+(26 2 (~p02(a) ~p06(a)))
+(27 2 (~p02(a) ~p10(a)))
+(28 2 (~p02(a) ~p14(a)))
+(29 2 (~p02(a) ~p18(a)))
+(30 2 (~p06(a) ~p10(a)))
+(31 2 (~p06(a) ~p14(a)))
+(32 2 (~p06(a) ~p18(a)))
+(33 2 (~p10(a) ~p14(a)))
+(34 2 (~p10(a) ~p18(a)))
+(35 2 (~p14(a) ~p18(a)))
+(36 2 (~p03(a) ~p07(a)))
+(37 2 (~p03(a) ~p11(a)))
+(38 2 (~p03(a) ~p15(a)))
+(39 2 (~p03(a) ~p19(a)))
+(40 2 (~p07(a) ~p11(a)))
+(41 2 (~p07(a) ~p15(a)))
+(42 2 (~p07(a) ~p19(a)))
+(43 2 (~p11(a) ~p15(a)))
+(44 2 (~p11(a) ~p19(a)))
+(45 2 (~p15(a) ~p19(a)))
+
+
+Initial predicate order: 
+(p00 p04 p08 p12 p16 p01 p05 p09 p13 p17 p02 p06 p10 p14 p18 p03 p07 p11 p15 p19)
+
+
+Trying a clash with: 6 and 1 : 
+Using factor of both :  ->> (46 4 (~p04(a) p01(a) p02(a) p03(a)))
+
+Trying a clash with: 6 and 2 :  failed.
+
+Trying a clash with: 7 and 1 : 
+Using factor of both :  ->> (47 4 (~p08(a) p01(a) p02(a) p03(a)))
+
+Trying a clash with: 7 and 3 :  failed.
+
+...
+
+Trying a clash with: 14 and 5 :  failed.
+
+Trying a clash with: 15 and 4 : 
+Using factor of both :  ->> (55 4 (~p16(a) p13(a) p14(a) p15(a)))
+
+Trying a clash with: 15 and 5 :  failed.
+
+Trying a clash with: 16 and 1 : 
+Using factor of both :  ->> (56 4 (~p05(a) p00(a) p02(a) p03(a)))
+
+...
+
+Trying a clash with: 35 and 5 :  failed.
+
+Trying a clash with: 36 and 1 : 
+Using factor of both :  ->> (76 4 (~p07(a) p00(a) p01(a) p02(a)))
+
+Trying a clash with: 36 and 2 :  failed.
+
+Trying a clash with: 37 and 1 : 
+Using factor of both :  ->> (77 4 (~p11(a) p00(a) p01(a) p02(a)))
+
+Trying a clash with: 37 and 3 :  failed.
+
+...
+
+Trying a clash with: 45 and 4 : 
+Using factor of both :  ->> (85 4 (~p19(a) p12(a) p13(a) p14(a)))
+
+...
+
+Trying a clash with: 57 and 3 :  failed.
+
+Trying a clash with: 56 and 2 :  failed.
+
+Trying a clash with: 55 and 5 : 
+Using factor of both :  ->> (86 6 (p13(a) p14(a) p15(a) p17(a) p18(a) p19(a)))
+
+...
+
+Trying a clash with: 35 and 87 : 
+Using factor of both : 
+Using factor of both :  ->> (88 2 (p15(a) p19(a)))
+
+Trying a clash with: 35 and 86 : 
+Using factor of both : 
+Using factor of both :  ->> (89 4 (p13(a) p15(a) p17(a) p19(a)))
+
+...
+
+Trying a clash with: 44 and 86 :  failed.
+
+Trying a clash with: 45 and 90 : 
+Using factor of both : 
+
+proof-found! F is derived.
+
+From 15 and 4, generate -> 55 - ~p16(a) | p13(a) | p14(a) | p15(a)
+
+From 55 and 5, generate -> 86 - p13(a) | p14(a) | p15(a) | p17(a) | p18(a) | p19(a)
+
+From 35 and 86, generate -> 89 - p13(a) | p15(a) | p17(a) | p19(a)
+
+From 25 and 89, generate -> 90 - p15(a) | p19(a)
+
+From 45 and 90 ---> F
+'proof-found!

@@ -1,0 +1,126 @@
+; Q10R4.THM
+ 
+; Art Quaife, JAR, Vol 5, No. 1, 1989
+ 
+; Reflexivity axiom for equidistance (Axiom 1)
+ 
+D(u,v,v,u)	
+ 
+; Transitivity axiom for equidistance (Axiom 2)
+ 
+~D(u,v,w,x) | ~D(u,v,y,z) | D(w,x,y,z)
+ 
+; Identity axiom for equidistance (Axiom 3)
+ 
+~D(u,v,w,w) | Equal(u,v)
+ 
+; Segment construction axioms (Axioms 4,5)
+ 
+B(u,v,Ext(u,v,w,x))
+D(v,Ext(u,v,w,x),w,x)
+ 
+; Outer five segment axiom (Axiom 6)
+ 
+~D(u,v,U,V) | ~D(v,w,V,W) | ~D(u,x,U,X) | ~D(v,x,V,X) | ~B(u,v,w) | ~B(U,V,W) | Equal(u,v) | D(w,x,W,X)
+ 
+; Identity axiom for betweenness (Axiom 7)
+ 
+~B(u,v,u) | Equal(u,v)
+ 
+; Inner Pasch Axiom (Axioms 8,9)
+ 
+~B(u,v,w) | ~B(y,x,w) | B(v,ip(u,v,w,x,y),y)
+~B(u,v,w) | ~B(y,x,w) | B(x,ip(u,v,w,x,y),u)
+ 
+; lower dimension axioms (Axioms 10,11,12)
+ 
+~B(p(),p1(),p2())
+~B(p1(),p2(),p())
+~B(p2(),p(),p1())
+ 
+; upper dimension axiom (Axiom 13)
+ 
+~D(u,x,u,y) | ~D(v,x,v,y) | ~D(w,x,w,y) | Equal(x,y) | B(u,v,w) | B(v,w,u) | B(w,u,v)
+ 
+; euclid's exioms (Axioms 14,15,16)
+ 
+~B(u,w,y) | ~B(v,w,x) | Equal(u,w) | B(u,v,euc1(u,v,w,x,y))
+~B(u,w,y) | ~B(v,w,x) | Equal(u,w) | B(u,x,euc2(u,v,w,x,y))
+~B(u,w,y) | ~B(v,w,x) | Equal(u,w) | B(euc1(u,v,w,x,y),y,euc2(u,v,w,x,y))
+ 
+ 
+; weakened elementary continuity axiom (Axioms 17,18)
+ 
+~D(u,v,u,V) | ~D(u,x,u,X) | ~B(u,v,x) | ~B(v,w,x) | B(V,cont(u,v,V,w,x,X),X)
+~D(u,v,u,V) | ~D(u,x,u,X) | ~B(u,v,x) | ~B(v,w,x) | D(u,w,u,cont(u,v,V,w,x,X))
+ 
+; equality (Axioms 19-28)
+ 
+Equal(x,x)
+~Equal(x,y) | Equal(y,x)
+~Equal(x,y) | ~Equal(y,z) | Equal(x,z)
+ 
+~Equal(x,y) | ~B(x,w,z) | B(y,w,z)
+~Equal(x,y) | ~B(w,x,z) | B(w,y,z)
+~Equal(x,y) | ~B(w,z,x) | B(w,z,y)
+ 
+~Equal(x,y) | ~D(x,v,w,z) | D(y,v,w,z)
+~Equal(x,y) | ~D(v,x,w,z) | D(v,y,w,z)
+~Equal(x,y) | ~D(v,w,x,z) | D(v,w,y,z)
+~Equal(x,y) | ~D(v,w,z,x) | D(v,w,z,y)
+ 
+; (D1) ordinary reflexivity of dist equality (Axiom 29)
+ 
+D(u,v,u,v)
+ 
+; (D2) dist equality is symmetric between it argument pairs (Axiom 30)
+ 
+~D(u,v,w,x) | D(w,x,u,v)
+ 
+; (D3) dist equality is symmetric within its argument pairs (Axiom 31)
+ 
+~D(u,v,w,x) | D(v,u,w,x)
+ 
+; (D4) Corollaries to (D2,D3)  (Axioms 32-36)
+ 
+~D(u,v,w,x) | D(u,v,x,w)
+~D(u,v,w,x) | D(v,u,x,w)
+~D(u,v,w,x) | D(w,x,v,u)
+~D(u,v,w,x) | D(x,w,u,v)
+~D(u,v,w,x) | D(x,w,v,u)
+ 
+; (D5) ordinary transitivity of dist equality (Axiom 37)
+ 
+~D(u,v,w,x) | ~D(w,x,y,z) | D(u,v,y,z)
+ 
+; (E1) Null extension (Axiom 38)
+ 
+Equal(x,Ext(u,x,y,y))
+ 
+; (B0) Corollary to (A4.1)  (Axiom 39)
+ 
+~Equal(y,Ext(u,v,w,x)) | B(u,v,y)
+ 
+; (R1) Definition of Reflection (Axiom 40)
+ 
+Equal(R(u,v),Ext(u,v,u,v))
+ 
+; (R2) Corollaries to (A4)  (Axioms 41-42)
+ 
+B(u,v,R(u,v))
+D(v,R(u,v),u,v)
+ 
+; (R3) corollaries to (E1)  (Axioms 43-44)
+ 
+~Equal(u,v) | Equal(v,R(u,v))
+Equal(u,R(u,u))
+ 
+; (R4) u is the only fixed point of R(u,v)  (Theorem 45-46)
+ 
+Equal(a(),R(b,a))
+ 
+negated_conclusion
+
+~Equal(b(),a())
+ 
+

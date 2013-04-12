@@ -1,0 +1,13 @@
+; EX2.THM   See TGTP, Exercises 5.2, 5.3
+ 
+~P(a) | ~Q(a) | ~R(a)
+~P(a) | ~Q(a) | R(a)
+~P(a) | Q(a) | ~R(a)
+~P(a) | Q(a) | R(a)
+P(a) | ~Q(a) | ~R(a)
+P(a) | ~Q(a) | R(a)
+ 
+negated_conclusion
+P(a) | Q(a)
+ 
+

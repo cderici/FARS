@@ -1,0 +1,48 @@
+Initiating the input : 
+<ID> <predCount> <actualClause>
+(1 3 (P(f(x,y),f(x,y)) ~S(x,f(x,y)) ~Q(y,f(x,y))))
+(2 3 (P(f(x,y),f(x,y)) ~S(x,f(x,y)) Q(f(x,y),z)))
+(3 3 (P(f(x,y),f(x,y)) ~S(x,f(x,y)) ~S(y,y)))
+(4 3 (P(f(x,y),f(x,y)) S(f(x,y),z) ~Q(y,f(x,y))))
+(5 3 (P(f(x,y),f(x,y)) S(f(x,y),z) Q(f(x,y),w)))
+(6 3 (P(f(x,y),f(x,y)) S(f(x,y),z) ~S(y,y)))
+(7 3 (P(f(x,y),f(x,y)) ~Q(z,z) ~Q(y,f(x,y))))
+(8 3 (P(f(x,y),f(x,y)) ~Q(z,z) Q(f(x,y),z)))
+(9 3 (P(f(x,y),f(x,y)) ~Q(z,z) ~S(y,y)))
+(10 3 (~P(x,x) ~S(x,f(x,y)) ~Q(y,f(x,y))))
+(11 3 (~P(x,x) ~S(x,f(x,y)) Q(f(x,y),z)))
+(12 3 (~P(x,x) ~S(x,f(x,y)) ~S(y,y)))
+(13 3 (~P(x,x) S(f(x,y),z) ~Q(y,f(x,y))))
+(14 3 (~P(x,x) S(f(x,y),z) Q(f(x,y),w)))
+(15 3 (~P(x,x) S(f(x,y),z) ~S(y,y)))
+(16 3 (~P(x,x) ~Q(y,y) ~Q(z,f(x,z))))
+(17 3 (~P(x,x) ~Q(y,y) Q(f(x,z),y)))
+(18 3 (~P(x,x) ~Q(y,y) ~S(z,z)))
+(19 3 (S(x,y) ~S(y,f(y,z)) ~Q(z,f(y,z))))
+(20 3 (S(x,y) ~S(y,f(y,z)) Q(f(y,z),w)))
+(21 3 (S(x,y) ~S(y,f(y,z)) ~S(z,z)))
+(22 3 (S(x,y) S(f(y,z),x) ~Q(z,f(y,z))))
+(23 3 (S(x,y) S(f(y,z),x) Q(f(y,z),w)))
+(24 3 (S(x,y) S(f(y,z),x) ~S(z,z)))
+(25 3 (S(x,y) ~Q(z,z) ~Q(w,f(y,w))))
+(26 3 (S(x,y) ~Q(z,z) Q(f(y,w),z)))
+(27 3 (S(x,y) ~Q(z,z) ~S(w,w)))
+
+
+Initial predicate order: 
+(S Q P)
+
+
+Trying order : (Q P S)
+
+Stopping for max-step
+
+Failed.. Memories are reset.. Going on...
+
+Trying order : (P S Q)
+
+
+proof-found! F is derived.
+
+From 18 and 5 ---> F
+'QED

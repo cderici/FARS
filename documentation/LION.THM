@@ -1,0 +1,82 @@
+; LION.THM
+ 
+;The Lion and the Unicorn found from JAR , pp 327-332, 1985
+; Authors: H. J. Ohlbach and M. Schmidt-Schauss
+ 
+; a day is either monday or tuesday or ... or sunday
+ 
+MO(x)|TU(x)|WE(x)|TH(x)|FR(x)|SA(x)|SU(x)   
+ 
+; the days are all distinct, ie, if x is monday, then x is not tuesday
+ 
+~MO(x)|~TU(x)								
+~MO(x)|~WE(x)								
+~MO(x)|~TH(x)								
+~MO(x)|~FR(x)								
+~MO(x)|~SA(x)								
+~MO(x)|~SU(x)								
+~TU(x)|~WE(x)								
+~TU(x)|~TH(x)								
+~TU(x)|~FR(x)
+~TU(x)|~SA(x)
+~TU(x)|~SU(x)
+~WE(x)|~TH(x)
+~WE(x)|~FR(x)
+~WE(x)|~SA(x)
+~WE(x)|~SU(x)
+~TH(x)|~FR(x)
+~TH(x)|~SA(x)
+~TH(x)|~SU(x)
+~FR(x)|~SA(x)
+~FR(x)|~SU(x)
+~SA(x)|~SU(x)
+ 
+; relating yesterday and today
+ 
+~MO(ystday(x)) | TU(x)
+~TU(x) | MO(ystday(x))
+~TU(ystday(x)) | WE(x)
+~WE(x) | TU(ystday(x))
+~WE(ystday(x)) | TH(x)
+~TH(x) | WE(ystday(x))
+~TH(ystday(x)) | FR(x)
+~FR(x) | TH(ystday(x))
+~FR(ystday(x)) | SA(x)
+~SA(x) | FR(ystday(x))
+~SA(ystday(x)) | SU(x)
+~SU(x) | SA(ystday(x))
+~SU(ystday(x)) | MO(x)
+~MO(x) | SU(ystday(x))
+ 
+; if x is one of the days the lion lies, then x is monday, tuesday, or wednesday
+ 
+~Mem(x,lydays(lion())) | MO(x) | TU(x) | WE(x)
+~Mem(x,lydays(unicorn())) | TH(x) | FR(x) | SA(x)
+ 
+; if x is monday, then x is a lying day for the lion
+ 
+~MO(x) | Mem(x,lydays(lion()))
+~TU(x) | Mem(x,lydays(lion()))
+~WE(x) | Mem(x,lydays(lion()))
+~TH(x) | Mem(x,lydays(unicorn()))
+~FR(x) | Mem(x,lydays(unicorn()))
+~SA(x) | Mem(x,lydays(unicorn()))
+ 
+; if x is not a member of the lying days of z  and  z says on day x that he lies on day y,
+;   then y is a member of the lying days of z.
+ 
+Mem(x,lydays(z)) | ~LA(z,x,y) | Mem(y,lydays(z))
+Mem(x,lydays(z)) | LA(z,x,y) | ~Mem(y,lydays(z))
+~Mem(x,lydays(z)) | ~LA(z,x,y) | ~Mem(y,lydays(z))
+~Mem(x,lydays(z)) | LA(z,x,y) | Mem(y,lydays(z))
+ 
+; the lion says today that he lied yesterday
+ 
+LA(lion(),today(),ystday(today()))
+LA(unicorn(),today(),ystday(today()))
+ 
+negated_conclusion
+
+; today is not thursday
+ 
+~TH(today())

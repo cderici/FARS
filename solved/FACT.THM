@@ -1,0 +1,8 @@
+; FACT.THM   See TGTP, Figure 5.10
+
+P(x) | P(y)
+
+negated_conclusion
+
+~P(x) | ~P(y)
+

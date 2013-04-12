@@ -1,0 +1,97 @@
+; WOLVES1.THM
+  
+; Steamroller problem (Schubert)......Version 1
+ 
+; The following riddle was published in Jeff Pelletier's paper, "Seventy-five problems
+; for testing automatic theorem provers," JAR, Vol. 2, pp 191-216, 1986. The problem
+; has become known as the Schubert Steamroller Problem, named after Len Schubert at
+; the Univ. of Alberta.  In 1986, Mark Stickel studied it and reported his results in
+; Schubert's Steamroller problem: Formulations and Solutions,  JAR, Vol. 2, pp 89-101, 1986.
+ 
+;--------------------------------------------------------------------------------
+; "Given:  Wolves, foxes, birds, caterpillers, and snails are animals, 
+; and there are some of each of them.  Also there are some grains and 
+; grains are plants.  Every animal either likes to eat all plants or 
+; all animals much smaller than itself that like to eat some plants.  
+; Caterpillers and snails are much smaller than birds, which are much 
+; smaller than foxes, which in turn are much smaller than wolves.  
+; Wolves do not eat foxes or grains, while birds like to eat caterpillers 
+; but not snails.  Caterpillers and snails like to eat some plants.
+ 
+; Prove:  There is an animal that likes to eat a grain-eating animal."
+;----------------------------------------------------------------------------------
+ 
+; {!x: Wolf(x)} & {@x: Wolf(x) => Animal(x)}.
+; {!x: Fox(x) }  & {@x: Fox(x)  => Animal(x)}.
+; {!x: Bird(x)}  & {@x: Bird(x) => Animal(x)}.
+; {!x: Caterpiller(x)} & {@x: Caterpiller(x) => Animal(x)}.
+; {!x: Snail(x)} & {@x: Snail(x) => Animal(x)}.
+; {!x: Grain(x)} & {@x: Grain(x) => Plant(x)}.
+ 
+; @x: Animal(x) => {{@y:Grain(y) => Eat(x,y) } | 
+; 			{@y: Animal(y) & Smaller(y,x) & {!z: Plant(z) & Eat(y,z)} => Eat(x,y)}}.
+ 
+; @x@y: Bird(y) & {Snail(x) | Caterpiller(x)} => Smaller(x,y).
+; @x@y: Bird(x) & Fox(y) => Smaller(x,y).
+; @x@y: Fox(x) & Wolf(y) => Smaller(x,y).
+; @x@y: Wolf(x) & {Fox(y) | Grain(y)} => ~Eat(x,y).
+; @x@y: Bird(x) & Caterpiller(y) => Eat(x,y).
+; @x@y: Bird(x) & Snail(y) => ~Eat(x,y).
+; @x@y: Caterpiller(x) | Snail(x) => {!y: Plant(y) & Eat(x,y)}.
+ 
+; theorem
+ 
+; The exact way to formulate the final clause, the theorem, itself, has been questioned 
+; by C. Walther in  "A mechanical solution of Schubert's Steamroller by many sorted resolution," 
+; Proceedings of the AAAI-84 Conference on AI, Austin, Texas, pp 330-334, 
+; with a revised version appearing in AI, Vol 26., pp 217-224, 1985. Stickel says, 
+; "there is substantial consensus on the intepretation of the problem.  
+; However, the conclusion is subject to diverse interpretations. 
+; The phrase 'grain-eating animal' may mean an animal that eats 'some' grain."
+ 
+; That interpretation leads to the first interpretation of the theorem,  Version 1:
+ 
+; !x!y: Animal(x) & Animal(y) & {!z: Grain(z) & Eat(y,z) & Eat(x,y)}.
+ 
+; Alternatively, it may mean an animal that eats 'every' grain (Walther), giving Version 2:
+ 
+; !x!y: Animal(x) & Animal(y) & {Eats(x,y) & @z:{Grain(z) => Eats(y,z)}}.
+ 
+; However, Stickel says that Walther actually proved a different form altogether, Version 3:
+ 
+; !x!y: Animal(x) & Animal(y) & {@z: {Grain(z) => {Eats(x,y) & Eats(y,z)}}}.
+ 
+ 
+; Clauses for Version 1 follow.  Versions 2,3 are in  x04.wolves2.thm and x05.wolves3.thm.  
+ 
+~Wolf(x) | Animal(x)
+Wolf(SK1())
+~Fox(x) | Animal(x)
+Fox(SK2())
+~Bird(x) | Animal(x)
+Bird(SK3())
+~Caterpiller(x) | Animal(x)
+Caterpiller(SK4())
+~Snail(x) | Animal(x)
+Snail(SK5())
+Grain(SK6())
+~Grain(x) | Plant(x)
+~Animal(x) | ~Plant(y) | Eat(x,y) | ~Animal(z) | ~Smaller(z,x) | ~Plant(u) | ~Eat(z,u) | Eat(x,z)
+Smaller(x,y) | ~Bird(y) | ~Snail(x)
+Smaller(x,y) | ~Bird(y) | ~Caterpiller(x)
+~Bird(x) | ~Fox(y) | Smaller(x,y)
+~Fox(x) | ~Wolf(y) | Smaller(x,y)
+~Eat(x,y) | ~Wolf(x) | ~Fox(y)
+~Eat(x,y) | ~Wolf(x) | ~Grain(y)
+~Bird(x) | ~Caterpiller(y) | Eat(x,y)
+~Bird(x) | ~Snail(y) | ~Eat(x,y)
+Plant(SK7()) | ~Caterpiller(x)
+Plant(SK8()) | ~Snail(x)
+Eat(x,SK7()) | ~Caterpiller(x)
+Eat(x,SK8()) | ~Snail(x)
+ 
+negated_conclusion
+
+~Animal(x) | ~Animal(y) | ~Grain(z) | ~Eat(y,z) | ~Eat(x,y)
+ 
+

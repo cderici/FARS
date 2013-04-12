@@ -1,0 +1,52 @@
+; LIFSCHTZ.THM  (Lifschitz's theorem)
+ 
+; See Wos, Automated Reasoning, 33 Basic Research Problems, pages 150
+ 
+negated_conclusion
+
+P(f(x,y),f(x,y)) | ~S(x,f(x,y)) | ~Q(y,f(x,y))
+P(f(x,y),f(x,y)) | ~S(x,f(x,y)) | Q(f(x,y),z)
+P(f(x,y),f(x,y)) | ~S(x,f(x,y)) | ~S(y,y)
+ 
+P(f(x,y),f(x,y)) | S(f(x,y),z) | ~Q(y,f(x,y))
+P(f(x,y),f(x,y)) | S(f(x,y),z) | Q(f(x,y),w)
+P(f(x,y),f(x,y)) | S(f(x,y),z) | ~S(y,y)
+ 
+P(f(x,y),f(x,y)) | ~Q(z,z) | ~Q(y,f(x,y))
+P(f(x,y),f(x,y)) | ~Q(z,z) | Q(f(x,y),z)
+P(f(x,y),f(x,y)) | ~Q(z,z) | ~S(y,y)
+ 
+~P(x,x) | ~S(x,f(x,y)) | ~Q(y,f(x,y))
+~P(x,x) | ~S(x,f(x,y)) | Q(f(x,y),z)
+~P(x,x) | ~S(x,f(x,y)) | ~S(y,y)
+ 
+~P(x,x) | S(f(x,y),z) | ~Q(y,f(x,y))
+~P(x,x) | S(f(x,y),z) | Q(f(x,y),w)
+~P(x,x) | S(f(x,y),z) | ~S(y,y)
+ 
+~P(x,x) | ~Q(y,y) | ~Q(z,f(x,z))
+~P(x,x) | ~Q(y,y) | Q(f(x,z),y)
+~P(x,x) | ~Q(y,y) | ~S(z,z)
+ 
+S(x,y) | ~S(y,f(y,z)) | ~Q(z,f(y,z))
+S(x,y) | ~S(y,f(y,z)) | Q(f(y,z),w)
+S(x,y) | ~S(y,f(y,z)) | ~S(z,z)
+ 
+S(x,y) | S(f(y,z),x) | ~Q(z,f(y,z))
+S(x,y) | S(f(y,z),x) | Q(f(y,z),w)
+S(x,y) | S(f(y,z),x) | ~S(z,z)
+ 
+S(x,y) | ~Q(z,z) | ~Q(w,f(y,w))
+S(x,y) | ~Q(z,z) | Q(f(y,w),z)
+S(x,y) | ~Q(z,z) | ~S(w,w)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

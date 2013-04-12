@@ -1,0 +1,70 @@
+Initiating the input : 
+<ID> <predCount> <actualClause>
+(1 7 (MO(x) TU(x) WE(x) TH(x) FR(x) SA(x) SU(x)))
+(2 2 (~MO(x) ~TU(x)))
+(3 2 (~MO(x) ~WE(x)))
+(4 2 (~MO(x) ~TH(x)))
+(5 2 (~MO(x) ~FR(x)))
+(6 2 (~MO(x) ~SA(x)))
+(7 2 (~MO(x) ~SU(x)))
+(8 2 (~TU(x) ~WE(x)))
+(9 2 (~TU(x) ~TH(x)))
+(10 2 (~TU(x) ~FR(x)))
+(11 2 (~TU(x) ~SA(x)))
+(12 2 (~TU(x) ~SU(x)))
+(13 2 (~WE(x) ~TH(x)))
+(14 2 (~WE(x) ~FR(x)))
+(15 2 (~WE(x) ~SA(x)))
+(16 2 (~WE(x) ~SU(x)))
+(17 2 (~TH(x) ~FR(x)))
+(18 2 (~TH(x) ~SA(x)))
+(19 2 (~TH(x) ~SU(x)))
+(20 2 (~FR(x) ~SA(x)))
+(21 2 (~FR(x) ~SU(x)))
+(22 2 (~SA(x) ~SU(x)))
+(23 2 (~MO(ystday(x)) TU(x)))
+(24 2 (~TU(x) MO(ystday(x))))
+(25 2 (~TU(ystday(x)) WE(x)))
+(26 2 (~WE(x) TU(ystday(x))))
+(27 2 (~WE(ystday(x)) TH(x)))
+(28 2 (~TH(x) WE(ystday(x))))
+(29 2 (~TH(ystday(x)) FR(x)))
+(30 2 (~FR(x) TH(ystday(x))))
+(31 2 (~FR(ystday(x)) SA(x)))
+(32 2 (~SA(x) FR(ystday(x))))
+(33 2 (~SA(ystday(x)) SU(x)))
+(34 2 (~SU(x) SA(ystday(x))))
+(35 2 (~SU(ystday(x)) MO(x)))
+(36 2 (~MO(x) SU(ystday(x))))
+(37 4 (~Mem(x,lydays(lion)) MO(x) TU(x) WE(x)))
+(38 4 (~Mem(x,lydays(unicorn)) TH(x) FR(x) SA(x)))
+(39 2 (~MO(x) Mem(x,lydays(lion))))
+(40 2 (~TU(x) Mem(x,lydays(lion))))
+(41 2 (~WE(x) Mem(x,lydays(lion))))
+(42 2 (~TH(x) Mem(x,lydays(unicorn))))
+(43 2 (~FR(x) Mem(x,lydays(unicorn))))
+(44 2 (~SA(x) Mem(x,lydays(unicorn))))
+(45 3 (Mem(x,lydays(z)) ~LA(z,x,y) Mem(y,lydays(z))))
+(46 3 (Mem(x,lydays(z)) LA(z,x,y) ~Mem(y,lydays(z))))
+(47 3 (~Mem(x,lydays(z)) ~LA(z,x,y) ~Mem(y,lydays(z))))
+(48 3 (~Mem(x,lydays(z)) LA(z,x,y) Mem(y,lydays(z))))
+(49 1 (LA(lion,today,ystday(today))))
+(50 1 (LA(unicorn,today,ystday(today))))
+(51 1 (~TH(today)))
+
+
+Initial predicate order: 
+(Mem TH MO TU WE FR SA SU LA)
+
+
+
+proof-found! F is derived.
+
+From 51 and 1, generate -> 52 - MO(today) | TU(today) | WE(today) | FR(today) | SA(today) | SU(today)
+
+From 12 and 52, generate -> 200 - MO(today) | WE(today) | FR(today) | SA(today)
+
+From 6 and 200, generate -> 204 - WE(today) | FR(today)
+
+From 14 and 204 ---> F
+'proof-found!

@@ -1,0 +1,20 @@
+
+; LOVE39A.THM  (Loveland39a)
+ 
+; The monkey-banana problem
+ 
+~a(x) | ~cl(x,y) | r(x,y)
+~o(x,y) | ~u(y,b()) | ~t(y) | cl(x,b())
+~i(x) | ~i(y) | ~i(z) | ~mv(x,y,z) | cl(z,f()) | u(y,z)
+~cb(x,y) | o(x,y)
+a(m())
+t(c())
+i(m())
+i(b())
+i(c())
+mv(m(),c(),b())
+~cl(b(),f())
+cb(m(),c())
+ 
+negated_conclusion
+~r(m(),b())

@@ -1,0 +1,35 @@
+; WOLVES2.THM
+ 
+; See WOLVES1.THM.........This is Version 2
+ 
+~Wolf(x) | Animal(x)
+Wolf(SK1())
+~Fox(x) | Animal(x)
+Fox(SK2())
+~Bird(x) | Animal(x)
+Bird(SK3())
+~Caterpiller(x) | Animal(x)
+Caterpiller(SK4())
+~Snail(x) | Animal(x)
+Snail(SK5())
+Grain(SK6())
+~Grain(x) | Plant(x)
+~Animal(x) | ~Plant(y) | Eat(x,y) | ~Animal(z) | ~Smaller(z,x) | ~Plant(u) | ~Eat(z,u) | Eat(x,z)
+Smaller(x,y) | ~Bird(y) | ~Snail(x)
+Smaller(x,y) | ~Bird(y) | ~Caterpiller(x)
+~Bird(x) | ~Fox(y) | Smaller(x,y)
+~Fox(x) | ~Wolf(y) | Smaller(x,y)
+~Eat(x,y) | ~Wolf(x) | ~Fox(y)
+~Eat(x,y) | ~Wolf(x) | ~Grain(y)
+~Bird(x) | ~Caterpiller(y) | Eat(x,y)
+~Bird(x) | ~Snail(y) | ~Eat(x,y)
+Plant(SK7(x)) | ~Caterpiller(x)
+Plant(SK8(x)) | ~Snail(x)
+Eat(x,SK7(x)) | ~Caterpiller(x)
+Eat(x,SK8(x)) | ~Snail(x)
+ 
+negated_conclusion
+~Animal(x) | ~Animal(y) | ~Eat(x,y) | Grain(j(x,y))
+~Animal(x) | ~Animal(y) | ~Eat(x,y) | ~Eat(y,j(x,y))
+ 
+

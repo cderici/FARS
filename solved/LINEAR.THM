@@ -1,0 +1,14 @@
+; LINEAR.THM     See TGTP   Section 5.2.5
+ 
+A(a) | B(a) | C(a) | D(a)
+A(a) | B(a) | C(a) | ~D(a)
+A(a) | B(a) | ~C(a)
+A(a) | ~B(a) | C(a)
+A(a) | ~B(a) | ~C(a)
+~A(a) | B(a)
+~A(a) | ~B(a) | C(a)
+ 
+negated_conclusion
+~A(a) | ~B(a) | ~C(a)
+ 
+

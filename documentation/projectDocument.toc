@@ -1,0 +1,91 @@
+\contentsline {chapter}{\numberline {1}General Overview}{1}
+\contentsline {paragraph}{}{1}
+\contentsline {paragraph}{}{1}
+\contentsline {chapter}{\numberline {2}Theoretical Perspective}{2}
+\contentsline {section}{\numberline {2.1}General Characteristics}{2}
+\contentsline {paragraph}{}{2}
+\contentsline {paragraph}{}{2}
+\contentsline {subsection}{\numberline {2.1.1}Inference Rules and General Strategy}{2}
+\contentsline {paragraph}{}{2}
+\contentsline {section}{\numberline {2.2}Soundness \& Completeness}{3}
+\contentsline {paragraph}{}{3}
+\contentsline {paragraph}{}{3}
+\contentsline {section}{\numberline {2.3}Known Weak Points}{3}
+\contentsline {paragraph}{}{3}
+\contentsline {paragraph}{}{3}
+\contentsline {section}{\numberline {2.4}Heuristics Used}{4}
+\contentsline {paragraph}{}{4}
+\contentsline {paragraph}{}{4}
+\contentsline {chapter}{\numberline {3}Practical Perspective}{5}
+\contentsline {paragraph}{}{5}
+\contentsline {section}{\numberline {3.1}Racket Language and DrRacket Environment}{5}
+\contentsline {paragraph}{}{5}
+\contentsline {paragraph}{}{5}
+\contentsline {paragraph}{}{6}
+\contentsline {paragraph}{}{6}
+\contentsline {paragraph}{}{6}
+\contentsline {paragraph}{}{6}
+\contentsline {section}{\numberline {3.2}Input \& Output}{7}
+\contentsline {paragraph}{}{7}
+\contentsline {subsection}{\numberline {3.2.1}General Syntax and Naming}{7}
+\contentsline {paragraph}{}{7}
+\contentsline {paragraph}{}{7}
+\contentsline {paragraph}{}{7}
+\contentsline {paragraph}{}{7}
+\contentsline {subsection}{\numberline {3.2.2}Restrictions in Input}{8}
+\contentsline {paragraph}{}{8}
+\contentsline {paragraph}{}{8}
+\contentsline {subsection}{\numberline {3.2.3}Naming}{8}
+\contentsline {paragraph}{}{8}
+\contentsline {section}{\numberline {3.3}The Main Loop}{9}
+\contentsline {paragraph}{}{9}
+\contentsline {paragraph}{}{9}
+\contentsline {chapter}{\numberline {4}Test Drive}{10}
+\contentsline {paragraph}{}{10}
+\contentsline {section}{\numberline {4.1}Pigeon Hole Problem}{10}
+\contentsline {paragraph}{}{10}
+\contentsline {paragraph}{}{11}
+\contentsline {section}{\numberline {4.2}Lifschitz's theorem}{14}
+\contentsline {paragraph}{}{14}
+\contentsline {paragraph}{}{14}
+\contentsline {paragraph}{}{15}
+\contentsline {section}{\numberline {4.3}LINEAR}{16}
+\contentsline {paragraph}{}{16}
+\contentsline {paragraph}{}{16}
+\contentsline {section}{\numberline {4.4}The Lion and the Unicorn Puzzle}{17}
+\contentsline {paragraph}{}{17}
+\contentsline {paragraph}{}{17}
+\contentsline {paragraph}{}{19}
+\contentsline {chapter}{\numberline {5}Discussion and Future Work}{21}
+\contentsline {paragraph}{}{21}
+\contentsline {paragraph}{}{22}
+\contentsline {chapter}{Appendices}{23}
+\contentsline {chapter}{\numberline {A}Complete Reference}{24}
+\contentsline {paragraph}{}{24}
+\contentsline {paragraph}{}{24}
+\contentsline {paragraph}{}{24}
+\contentsline {section}{\numberline {A.1}Main}{25}
+\contentsline {subsection}{\numberline {A.1.1}Global Parameters}{25}
+\contentsline {subsection}{\numberline {A.1.2}Functions}{26}
+\contentsline {section}{\numberline {A.2}Util}{28}
+\contentsline {subsection}{\numberline {A.2.1}Functions}{28}
+\contentsline {section}{\numberline {A.3}Language}{32}
+\contentsline {subsection}{\numberline {A.3.1}Global Parameters}{32}
+\contentsline {subsection}{\numberline {A.3.2}Functions}{33}
+\contentsline {section}{\numberline {A.4}Parser}{34}
+\contentsline {subsection}{\numberline {A.4.1}Global Parameters}{34}
+\contentsline {subsection}{\numberline {A.4.2}Functions}{35}
+\contentsline {chapter}{\numberline {B}Racket as a System}{36}
+\contentsline {section}{\numberline {B.1}Overview of Syntax and Semantics}{36}
+\contentsline {paragraph}{}{36}
+\contentsline {paragraph}{}{36}
+\contentsline {paragraph}{}{37}
+\contentsline {paragraph}{}{37}
+\contentsline {section}{\numberline {B.2}DrRacket}{37}
+\contentsline {paragraph}{}{37}
+\contentsline {paragraph}{}{38}
+\contentsline {paragraph}{}{38}
+\contentsline {paragraph}{}{38}
+\contentsline {section}{\numberline {B.3}Some Built-In Racket Functions}{38}
+\contentsline {paragraph}{}{38}
+\contentsline {paragraph}{}{39}

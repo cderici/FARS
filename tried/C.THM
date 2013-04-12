@@ -1,0 +1,11 @@
+; C.THM   See TGTP, Exercises 6.1 and 6.2
+
+~P(x) | Q(a())
+~Q(a()) | ~R(x)
+R(a()) | S(a())
+~R(x) | P(y)
+
+negated_conclusion
+
+~S(x)
+

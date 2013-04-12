@@ -1,0 +1,36 @@
+Initiating the input : 
+<ID> <predCount> <actualClause>
+(1 4 (A(a) B(a) C(a) D(a)))
+(2 4 (A(a) B(a) C(a) ~D(a)))
+(3 3 (A(a) B(a) ~C(a)))
+(4 3 (A(a) ~B(a) C(a)))
+(5 3 (A(a) ~B(a) ~C(a)))
+(6 2 (~A(a) B(a)))
+(7 3 (~A(a) ~B(a) C(a)))
+(8 3 (~A(a) ~B(a) ~C(a)))
+
+
+Initial predicate order: 
+(A B C D)
+
+
+Trying order : (B D C A)
+
+Stopping : No useful clause in nucleus
+
+Failed.. Memories are reset.. Going on...
+
+Trying order : (D C A B)
+
+Stopping for max-step
+
+Failed.. Memories are reset.. Going on...
+
+Trying order : (D A B C)
+
+proof-found! F is derived.
+
+From 8 and 1, generate -> 11 - D(a)
+From 2 and 11, generate -> 12 - A(a) | B(a) | C(a)
+From 8 and 12 ---> F
+'QED

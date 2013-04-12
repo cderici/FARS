@@ -1,0 +1,31 @@
+=====================================================
+
+FARS : Functional Automated Reasoning System - v0.8
+
+Caner Derici
+caner.derici@boun.edu.tr
+
+=====================================================
+
+FARS is a resolution/paramodulation theorem prover which 
+mainly employs the set of support strategy, along with 
+hyperresolution, which is a special case of semantic 
+resolution. It is designed to prove theorems expressed 
+in first-order predicate logic with equality. Given the 
+axioms and the negated conclusion as clauses1 , FARS tries 
+to prove it by resolution-refutation method. Furthermore, 
+all of the proofs in FARS are refutations (by contradiction).
+
+The inference rules in FARS are generally based on 
+resolution (with factorization) and paramodulation. 
+In particular, FARS employs as inference rules binary 
+resolution and hyperresolution. Additionally, equational 
+deduction is done with binary paramodulation. Other 
+attributes of FARS includes also forward and backward 
+subsumption.
+
+To run FARS on an input, you just provide the file name:
+
+(prove-file "solved/LION.THM")
+
+For more advanced invocations, refer to FARS documentation.
