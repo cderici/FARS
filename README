@@ -24,7 +24,8 @@ deduction is done with binary paramodulation. Other
 attributes of FARS includes also forward and backward 
 subsumption.
 
-To run FARS on an input, you just provide the file name:
+To run FARS on an input, you just provide the file name
+and run 'prove-file' in 'main.rkt', like below:
 
 (prove-file "solved/LION.THM")
 
