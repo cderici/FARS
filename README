@@ -9,7 +9,7 @@ caner.derici@boun.edu.tr
 
 FARS is a resolution/paramodulation theorem prover which 
 mainly employs the set of support strategy, along with 
-hyperresolution, which is a special case of semantic 
+hyper-resolution, which is a special case of semantic 
 resolution. It is designed to prove theorems expressed 
 in first-order predicate logic with equality. Given the 
 axioms and the negated conclusion as clauses1 , FARS tries 
